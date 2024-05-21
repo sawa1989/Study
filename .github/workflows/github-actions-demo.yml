@@ -49,6 +49,8 @@ jobs:
 
       - name: Commit and push generated template
         run: |
+          git config --global user.email "gin9815@github.com"
+          git config --global user.name "gin9815"
           export COMMIT_MESSAGE="Generated template from ${{ needs.docker.outputs.commit_hash }}"
           sed -i 's@goyo9815/server1:.*@goyo9815/server1:${{ needs.docker.outputs.commit_hash }}@g' ./deploy/deployment.yaml
           git add .
