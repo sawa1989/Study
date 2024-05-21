@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: go
-          image: goyo9815/server1:4c63b04
+          image: goyo9815/server1:081c749
           ports:
             - containerPort: 80
 ---
