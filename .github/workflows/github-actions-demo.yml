@@ -1,4 +1,4 @@
-name: docker build test
+name: docker build and edit yaml
 
 on:
   push:
@@ -39,7 +39,7 @@ jobs:
       commit_hash: ${{ steps.commit.outputs.short }}
 
       
-  argo:
+  edityaml:
     runs-on: ubuntu-latest
     needs: docker
     steps:
